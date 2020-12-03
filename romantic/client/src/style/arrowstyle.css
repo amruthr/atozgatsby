@@ -1,0 +1,134 @@
+.stepsWrapper.wrapper, arrow-steps {
+  width: 100%;
+}
+
+@media only screen and (max-width: 999px) {
+  .stepsWrapper.wrapper {
+      display: none;
+  }  
+}
+
+
+
+.arrow-steps .step h3 {
+  color: #fff;
+  margin: 0;
+  margin-top: 19px;
+  font-family: 'Jost';
+  font-weight: 600;
+  font-size: xxx-large;
+}
+
+.arrow-steps .step p {
+  color: #fff;
+  margin: 0;
+  font-weight:bolder;
+  margin-top: 40px;
+  font-family: 'Jost';
+  font-size: 25px;
+}
+.arrow-steps .step:first-child h3{
+  color: #fff;
+  text-align: LEFT;
+    margin: 0;
+  font-weight:bolder;
+
+    margin-top: 19px;
+    font-family: 'Jost';
+    font-weight: 600;
+    font-size: xxx-large;
+}
+.arrow-steps .step:first-child p{
+  text-align: LEFT;
+  COLOR: #000;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.arrow-steps .step {
+  text-align: center;
+  color: #666;
+  cursor: default;
+  margin: 0 13px;
+  padding: 15px 10px 10px 30px;
+  max-width: 20%;
+  min-width: 17%;
+  height:220px;
+  float: left;
+  position: relative;
+  background-color: #da3f3f;
+  transition: background-color 0.2s ease;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 0;
+    height: 120px;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 50px solid #da3f3f;	
+    z-index: 2;
+  transition: border-color 0.2s ease;
+}
+
+.arrow-steps .step:nth-child(2):after{
+  border-left: 50px solid #D35D5D;
+}
+.arrow-steps .step:nth-child(3):after{
+  border-left: 50px solid #D48282;
+}
+.arrow-steps .step:nth-child(4):after{
+  border-left: 50px solid #DAB8B8;
+}
+.arrow-steps .step:before {
+    right: auto;
+    left: 0;
+    border-left: 50px solid #fff;	
+    z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+    border: none;
+}
+.arrow-steps .step:last-child:after {
+  border: none;
+}
+.arrow-steps .step:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;    
+    min-width: 30%;
+  max-width: 30%;
+}
+
+.arrow-steps .step span {
+    position: relative;
+}
+
+.arrow-steps .step span:before {
+    opacity: 0;
+    content: "✔";
+    position: absolute;
+    top: -2px;
+    left: -20px;
+}
+
+.arrow-steps .step.done span:before {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease 0.5s;
+    -moz-transition: opacity 0.3s ease 0.5s;
+    -ms-transition: opacity 0.3s ease 0.5s;
+    transition: opacity 0.3s ease 0.5s;
+}
+
+.arrow-steps .step.current {
+    color: #fff;
+    background-color: #23468c;
+}
+
+.arrow-steps .step.current:after {
+    border-left: 17px solid #23468c;	
+}
